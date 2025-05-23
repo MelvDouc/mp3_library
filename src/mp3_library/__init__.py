@@ -14,6 +14,7 @@ def create_app() -> Flask:
 
 
 def handle_exception(e):
+    print(e)
     response = make_response()
     response.data = json_stringify({
         "message": "Sorry, I must've messed up somewhere."
